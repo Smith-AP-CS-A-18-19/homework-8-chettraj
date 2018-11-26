@@ -1,22 +1,27 @@
 public class Homework8 {
-
+	private int[] arr;
 	/* Finish the constructor and create any necessary instance
 	 * variables. A Homework8 object should have an array that
 	 * holds n int values
 	 */
 	public Homework8(int n) {
+		arr = new int[n];
 
 	}
 
 	/* Return the stored array
 	 */
 	public int[] problem1() {
+		return arr;
 
 	}
 
 	/* Fill the stored array with the provided int
 	 */
 	public void problem2(int n) {
+		for(int p = 0; p < arr.length; p++){
+			arr[p] = n;
+		}
 
 	}
 
@@ -24,6 +29,10 @@ public class Homework8 {
 	 * n, the second n-1, the third n-2, etc.
 	 */
 	public void problem3(int n) {
+		for (int y = 0; y < arr.length; y++){
+			arr[y] = n;
+			n--;
+		}
 
 	}
 
@@ -31,7 +40,13 @@ public class Homework8 {
 	 * provided array
 	 */
 	public double problem4(double[] arr) {
-
+		double u = arr[0];
+		for (int m = 0; m < arr.length; m++){
+			if (arr[m] > u){
+				u = arr[m];
+			}
+		}
+		return u;
 	}
 
 	/* Find and return the index of num in the
@@ -39,6 +54,12 @@ public class Homework8 {
 	 * is not in the array
 	 */
 	public int problem5(int[] arr, int num) {
+		for (int h = 0; h < arr.length; h++){
+			if (arr[h] == num){
+				return h;
+			}
+		}
+		return -1;
 
 	}
 
